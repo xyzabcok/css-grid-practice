@@ -1,0 +1,47 @@
+.wrapper {
+    max-width: 1000px;
+    max-height: 900px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr;
+    gap: 15px;
+}
+
+h1 {
+    border: 3px black;
+}
+
+footer {
+    /* Span across both columns */
+    border: 3px solid darkslategrey;
+    grid-row: 5 / -1;
+    grid-column: 1 / -1;
+}
+
+sidebar {
+    /* only spans across the first column */
+    border: 3px solid blue;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 1;
+}
+
+nav {
+    /* Span across the second column */
+    grid-row-start: 2;
+    grid-column-start: 2;
+    border: 3px solid purple;
+}
+
+article {
+    /* Span across the second column */
+    border: 3px solid pink;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / 5;
+    border: 3px solid red;
+}
